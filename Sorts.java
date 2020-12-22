@@ -10,4 +10,15 @@ public class Sorts {
       }
     }
   }
+  public static void insertionSort(int[] data) {
+    for (int i = 0; i < data.length; i++) {
+      int current = data[i];
+      int j;
+      for (j = i - 1; j >= 0 && data[j] > current; j--) {
+        data[j+1] = data[j];
+      }
+      data[j + 1] = current;
+    }
+  }
+  
 }
